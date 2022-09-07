@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="882cc41f-8089-46d9-b3cd-40202bb77853" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/MaxMinWithLambdaAndReduce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/SumOfCubesOfNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/SumOfOddNumbersInList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/SumOfSquaresOfNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Programming/FP02Functional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Programming/FP02Structured.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exercises/FPEX04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercises/FPEX04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Programming/FP01Functional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Programming/FP01Functional.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +52,22 @@
       <recent name="Programming" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FPEX04">
-    <configuration name="FP01Functional" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Programming.FP01Functional" />
+  <component name="RunManager" selected="Application.SumOfOddNumbersInList">
+    <configuration name="Exercises.FPEX04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercises.FPEX04" />
+      <module name="FunctionalProgramming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FP02Functional" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programming.FP02Functional" />
       <module name="FunctionalProgramming" />
       <extension name="coverage">
         <pattern>
@@ -62,8 +79,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FPEX01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercises.FPEX01" />
+    <configuration name="FP02Structured" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programming.FP02Structured" />
+      <module name="FunctionalProgramming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Programming.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaxMinWithLambdaAndReduce" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercises.MaxMinWithLambdaAndReduce" />
       <module name="FunctionalProgramming" />
       <extension name="coverage">
         <pattern>
@@ -75,34 +105,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FPEX02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercises.FPEX02" />
-      <module name="FunctionalProgramming" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercises.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FPEX03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercises.FPEX03" />
-      <module name="FunctionalProgramming" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercises.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FPEX04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercises.FPEX04" />
+    <configuration name="SumOfOddNumbersInList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercises.SumOfOddNumbersInList" />
       <module name="FunctionalProgramming" />
       <extension name="coverage">
         <pattern>
@@ -116,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FPEX04" />
-        <item itemvalue="Application.FP01Functional" />
-        <item itemvalue="Application.FPEX03" />
-        <item itemvalue="Application.FPEX02" />
-        <item itemvalue="Application.FPEX01" />
+        <item itemvalue="Application.SumOfOddNumbersInList" />
+        <item itemvalue="Application.MaxMinWithLambdaAndReduce" />
+        <item itemvalue="Application.FP02Functional" />
+        <item itemvalue="Application.FP02Structured" />
+        <item itemvalue="Application.Exercises.FPEX04" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +161,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/Exercises/MaxMinWithLambdaAndReduce.java</url>
+          <line>6</line>
+          <properties class="Exercises.MaxMinWithLambdaAndReduce" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
