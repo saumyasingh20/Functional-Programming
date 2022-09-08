@@ -2,7 +2,7 @@ package Exercises;
 
 import java.util.List;
 
-public class SumOfCubesOfNumbers
+public class FPEX06SumOfCubesOfNumbers
 {
     public static void main(String[] args) {
         List<Integer> numbers = List.of(2,3,5,0,9,89,4);

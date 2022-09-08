@@ -2,7 +2,7 @@ package Exercises;
 
 import java.util.List;
 
-public class MaxMinWithLambdaAndReduce {
+public class FPEX05MaxMinWithLambdaAndReduce {
 
     public static void main(String[] args) {
 
