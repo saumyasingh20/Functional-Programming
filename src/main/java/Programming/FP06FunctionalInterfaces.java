@@ -6,6 +6,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
 
 public class FP06FunctionalInterfaces {
 
@@ -64,11 +65,17 @@ public class FP06FunctionalInterfaces {
 		//Supplier - No Input -> return something
 		
 		Supplier<Integer> randomIntegerSupplier = () -> {
-												Random r = new Random()	;
-												return r.nextInt(5000);
+													Random r = new Random()	;
+													return r.nextInt(5000);
 												};
 		
-		System.out.println(randomIntegerSupplier.get());
+		//System.out.println(randomIntegerSupplier.get());
+		
+		/* Unary Operator - takes one parameter as i/p and
+		 returns same type of output */
+		
+		UnaryOperator<Integer> tripleNumber = (x) -> 3*x;
+		System.out.println(tripleNumber.apply(10));
 		
 		
 	}
