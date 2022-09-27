@@ -2,6 +2,9 @@ package Programming;
 
 import java.util.List;
 import java.util.Random;
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -75,7 +78,34 @@ public class FP06FunctionalInterfaces {
 		 returns same type of output */
 		
 		UnaryOperator<Integer> tripleNumber = (x) -> 3*x;
+		
 		System.out.println(tripleNumber.apply(10));
+		
+		//BiPredicate - takes two arguments as i/p and returns a boolean
+		
+		BiPredicate<Integer,String> biPredicate = (num,str) -> { 
+			
+			return num<10 && str.length()>5 ;
+		} ;
+		System.out.println(biPredicate.test(5,"saum"));
+		
+	/*BiFunction - takes two arguments as i/p of first two types 
+	and returns an o/p of third type */
+		
+		BiFunction<Integer,String, String> biFunction = (num,str) -> { 
+			
+			return num+" "+str ;
+		} ;
+		
+		System.out.println(biFunction.apply(5,"saum"));
+		
+		
+		BiConsumer<String, String> biConsumer = (str1,str2) ->
+		{
+			System.out.println(str1+" " + str2);
+		};
+		
+		biConsumer.accept("saum", "singh");
 		
 		
 	}
