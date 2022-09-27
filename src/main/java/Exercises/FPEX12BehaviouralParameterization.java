@@ -30,7 +30,7 @@ public class FPEX12BehaviouralParameterization {
 		
 		return numbers.stream()
 					   .map(mappingFunction)
-					  .collect(Collectors.toList());
+					   .collect(Collectors.toList());
 	}
 	
 	

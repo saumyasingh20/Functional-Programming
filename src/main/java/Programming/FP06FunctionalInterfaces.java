@@ -1,9 +1,11 @@
 package Programming;
 
 import java.util.List;
+import java.util.Random;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class FP06FunctionalInterfaces {
 
@@ -57,6 +59,18 @@ public class FP06FunctionalInterfaces {
 			.filter(evenPredicate)
 			.map(squareFunction)
 			.forEach(sysoutConsumer);
+		
+		
+		//Supplier - No Input -> return something
+		
+		Supplier<Integer> randomIntegerSupplier = () -> {
+												Random r = new Random()	;
+												return r.nextInt(5000);
+												};
+		
+		System.out.println(randomIntegerSupplier.get());
+		
+		
 	}
 
 }
