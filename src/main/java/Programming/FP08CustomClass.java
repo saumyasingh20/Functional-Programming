@@ -203,5 +203,35 @@ public class FP08CustomClass {
 						.filter(reviewScoreGreaterThan95Predicate)
 						.mapToInt(Course::getNoOfStudents)
 						.count());
+				
+			//GROUP BY - Group the Courses according to the category
+				System.out.println(
+						courses.stream()
+						.collect(Collectors.groupingBy(Course::getCategory)));
+				
+				System.out.println(
+						courses.stream()
+						.collect(Collectors.groupingBy(Course::getCategory, Collectors.counting())));
+				
+				System.out.println(
+						courses.stream()
+						.collect(Collectors.groupingBy(Course::getCategory, 
+								 Collectors.maxBy(Comparator.comparing(Course::getReviewScore)))));
+				
+				System.out.println(
+						courses.stream()
+						.collect(Collectors.groupingBy(Course::getCategory, 
+								 Collectors.mapping(Course::getName,Collectors.toList()))));
+				System.out.println(
+						courses.stream()
+						.filter(course -> course.getCategory().contains("Cloud"))
+						.collect(Collectors.groupingBy(Course::getCategory,Collectors.counting()))
+						);
+				System.out.println(
+						courses.stream()
+						.filter(course -> course.getCategory().contains("Cloud"))
+						.collect(Collectors.groupingBy(Course::getCategory,Collectors.averagingInt(Course::getNoOfStudents)))
+						);
+				
 
 }}
