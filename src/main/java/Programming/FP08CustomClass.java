@@ -232,6 +232,16 @@ public class FP08CustomClass {
 						.filter(course -> course.getCategory().contains("Cloud"))
 						.collect(Collectors.groupingBy(Course::getCategory,Collectors.averagingInt(Course::getNoOfStudents)))
 						);
+				Predicate<Course> reviewScoreGreaterThan95Predicate2 
+				= createPredicateWithCutoffReviewScore(95);
+
+				Predicate<Course> reviewScoreGreaterThan90Predicate2 
+				= createPredicateWithCutoffReviewScore(90);
 				
 
-}}
+}
+	private static Predicate<Course> createPredicateWithCutoffReviewScore(int cutoffReviewScore) {
+		return course -> course.getReviewScore() > cutoffReviewScore;
+	}
+	
+	}
