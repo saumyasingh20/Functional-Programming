@@ -100,7 +100,7 @@ public class FP08CustomClass {
 		System.out.println(
 				courses.stream().sorted(comparingByNumOfStudentsDecreasing).collect(Collectors.toList()));
 		
-		Comparator<Course> comparingByNumOfStudentsAndReviewScore = Comparator.comparingInt(Course::getNoOfStudents).thenComparingInt(Course::getReviewScore);
+		Comparator<Course> comparingByNumOfStudentsAndReviewScore = Comparator.comparingInt(Course::getNoOfStudents).thenComparingInt(Course::getReviewScore).reversed();
 		
 		System.out.println(
 				courses.stream().sorted(comparingByNumOfStudentsAndReviewScore).collect(Collectors.toList()));
@@ -136,12 +136,54 @@ public class FP08CustomClass {
 							  .collect(Collectors.toList()));
 				
 		/*drop while - 	keeps on dropping / skipping the items if 
-		 * 				they satisfy the criteria 
+		 * 				they satisfy the condition , as soon as the condition 
+		 * 				becomes false it returns the remaining items of list 
 		 */
 				System.out.println(
 						courses.stream()
 						.dropWhile(course -> course.getReviewScore()>=95)
-						.collect(Collectors.toList()));		
+						.collect(Collectors.toList()));	
+				
+			//max - returns the max from a comparator condition
+				System.out.println(
+						courses.stream()
+								.max(comparingByNumOfStudentsIncreasing));
+				
+				System.out.println(
+						courses.stream()
+								.max(comparingByNumOfStudentsDecreasing));
+				
+			//min - returns the min from a comparator condition
+				System.out.println(
+						courses.stream()
+								.min(comparingByNumOfStudentsIncreasing));
+				
+				System.out.println(
+						courses.stream()
+								.min(comparingByNumOfStudentsDecreasing));
+				System.out.println(
+						courses.stream()
+						.filter(reviewScoreLesserThan90Predicate)
+						.min(comparingByNumOfStudentsAndReviewScore)
+						.orElse(new Course("Kubernetes", "Cloud", 91, 20000))
+							);
+				
+			//find first - returns the top / first element
+				System.out.println(
+						courses.stream()
+						.filter(reviewScoreGreaterThan95Predicate)
+						.findFirst());
+				
+				System.out.println(
+						courses.stream()
+						.filter(reviewScoreLesserThan90Predicate)
+						.findFirst()); //returns Optional.empty
+				
+			//find any - returns the element meeting the criteria
+				System.out.println(
+						courses.stream()
+						.filter(reviewScoreGreaterThan90Predicate)
+						.findAny());	
 
 
 }}
