@@ -105,7 +105,7 @@ public class FP06FunctionalInterfaces {
 			System.out.println(str1+" " + str2);
 		};
 		
-		biConsumer.accept("saum", "singh");
+		biConsumer.accept("saumya", "singh");
 		
 		
 	}
