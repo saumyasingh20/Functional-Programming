@@ -104,6 +104,44 @@ public class FP08CustomClass {
 		
 		System.out.println(
 				courses.stream().sorted(comparingByNumOfStudentsAndReviewScore).collect(Collectors.toList()));
-	}
+		
+		//limit - limiting the no. of items in the list
+		System.out.println(
+				courses.stream()
+				.sorted(comparingByNumOfStudentsAndReviewScore)
+				.limit(5)
+				.collect(Collectors.toList()));
+		
+		//skip - skipping the items in the list
+				System.out.println(
+						courses.stream()
+						.sorted(comparingByNumOfStudentsAndReviewScore)
+						.skip(3)
+						.collect(Collectors.toList()));
+				
+		//combining both operations - limit and skip
+				System.out.println(
+						courses.stream()
+						.sorted(comparingByNumOfStudentsAndReviewScore)
+						.skip(3)
+						.limit(2)
+						.collect(Collectors.toList()));
+				
+		/*take while - 	return all the elements of the list 
+		 				until one of the item does not meet the criteria
+		*/
+				System.out.println(
+						courses.stream()
+							  .takeWhile(course -> course.getReviewScore()>=95)
+							  .collect(Collectors.toList()));
+				
+		/*drop while - 	keeps on dropping / skipping the items if 
+		 * 				they satisfy the criteria 
+		 */
+				System.out.println(
+						courses.stream()
+						.dropWhile(course -> course.getReviewScore()>=95)
+						.collect(Collectors.toList()));		
 
-}
+
+}}
