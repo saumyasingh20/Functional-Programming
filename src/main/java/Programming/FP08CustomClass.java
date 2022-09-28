@@ -179,11 +179,29 @@ public class FP08CustomClass {
 						.filter(reviewScoreLesserThan90Predicate)
 						.findFirst()); //returns Optional.empty
 				
-			//find any - returns the element meeting the criteria
+			//find any - returns any element meeting the criteria
 				System.out.println(
 						courses.stream()
 						.filter(reviewScoreGreaterThan90Predicate)
-						.findAny());	
-
+						.findAny());
+			
+			//sum, avg and count	
+				System.out.println(
+						courses.stream()
+						.filter(reviewScoreGreaterThan95Predicate)
+						.mapToInt(Course::getNoOfStudents)
+						.sum());
+				
+				System.out.println(
+						courses.stream()
+						.filter(reviewScoreGreaterThan95Predicate)
+						.mapToInt(Course::getNoOfStudents)
+						.average());
+				
+				System.out.println(
+						courses.stream()
+						.filter(reviewScoreGreaterThan95Predicate)
+						.mapToInt(Course::getNoOfStudents)
+						.count());
 
 }}
